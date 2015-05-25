@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98919C9D1ADD06630099129E /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98919C9C1ADD06630099129E /* EstimoteSDK.framework */; };
+		849B8EF11B0F0A43006CE814 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849B8EEC1B0F0A2A006CE814 /* UIKit.framework */; };
+		849B8EF21B0F0A44006CE814 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849B8EEE1B0F0A2F006CE814 /* Foundation.framework */; };
+		849B8EF41B0F0E8B006CE814 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849B8EF31B0F0E8B006CE814 /* EstimoteSDK.framework */; };
+		849B8EF61B0F1338006CE814 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B8EF51B0F1338006CE814 /* Location.swift */; };
+		849B8EF81B0F1398006CE814 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B8EF71B0F1398006CE814 /* LocationManager.swift */; };
 		98EE58951A9DD60C006FE414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EE58941A9DD60C006FE414 /* AppDelegate.swift */; };
 		98EE58971A9DD60C006FE414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EE58961A9DD60C006FE414 /* ViewController.swift */; };
 		98EE589A1A9DD60C006FE414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98EE58981A9DD60C006FE414 /* Main.storyboard */; };
@@ -19,7 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		98919C9C1ADD06630099129E /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		849B8EEC1B0F0A2A006CE814 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		849B8EEE1B0F0A2F006CE814 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		849B8EF31B0F0E8B006CE814 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		849B8EF51B0F1338006CE814 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		849B8EF71B0F1398006CE814 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		98EE588F1A9DD60C006FE414 /* Rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EE58931A9DD60C006FE414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98EE58941A9DD60C006FE414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,23 +46,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849B8EF21B0F0A44006CE814 /* Foundation.framework in Frameworks */,
 				98EE58B91A9DD62A006FE414 /* SystemConfiguration.framework in Frameworks */,
-				98919C9D1ADD06630099129E /* EstimoteSDK.framework in Frameworks */,
+				849B8EF11B0F0A43006CE814 /* UIKit.framework in Frameworks */,
 				98EE58B71A9DD623006FE414 /* CoreLocation.framework in Frameworks */,
 				98EE58B51A9DD61C006FE414 /* CoreBluetooth.framework in Frameworks */,
+				849B8EF41B0F0E8B006CE814 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		98EE58861A9DD60C006FE414 = {
+		849B8EE81B0E3199006CE814 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				98919C9C1ADD06630099129E /* EstimoteSDK.framework */,
+				849B8EF31B0F0E8B006CE814 /* EstimoteSDK.framework */,
+				849B8EEE1B0F0A2F006CE814 /* Foundation.framework */,
+				849B8EEC1B0F0A2A006CE814 /* UIKit.framework */,
 				98EE58B81A9DD62A006FE414 /* SystemConfiguration.framework */,
 				98EE58B61A9DD623006FE414 /* CoreLocation.framework */,
 				98EE58B41A9DD61C006FE414 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		849B8EE91B0F0918006CE814 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		849B8EEA1B0F091F006CE814 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				849B8EF51B0F1338006CE814 /* Location.swift */,
+				849B8EF71B0F1398006CE814 /* LocationManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		849B8EEB1B0F0923006CE814 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98EE58861A9DD60C006FE414 = {
+			isa = PBXGroup;
+			children = (
 				98EE58911A9DD60C006FE414 /* Rooms */,
 				98EE58901A9DD60C006FE414 /* Products */,
 			);
@@ -71,9 +113,13 @@
 		98EE58911A9DD60C006FE414 /* Rooms */ = {
 			isa = PBXGroup;
 			children = (
-				98EE58941A9DD60C006FE414 /* AppDelegate.swift */,
 				98EE58BE1A9DD78A006FE414 /* Estimote-Bridging-Header.h */,
+				98EE58941A9DD60C006FE414 /* AppDelegate.swift */,
 				98EE58961A9DD60C006FE414 /* ViewController.swift */,
+				849B8EEB1B0F0923006CE814 /* Views */,
+				849B8EEA1B0F091F006CE814 /* Model */,
+				849B8EE91B0F0918006CE814 /* Controllers */,
+				849B8EE81B0E3199006CE814 /* Frameworks */,
 				98EE58981A9DD60C006FE414 /* Main.storyboard */,
 				98EE589B1A9DD60C006FE414 /* Images.xcassets */,
 				98EE589D1A9DD60C006FE414 /* LaunchScreen.xib */,
@@ -160,7 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849B8EF81B0F1398006CE814 /* LocationManager.swift in Sources */,
 				98EE58971A9DD60C006FE414 /* ViewController.swift in Sources */,
+				849B8EF61B0F1338006CE814 /* Location.swift in Sources */,
 				98EE58951A9DD60C006FE414 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +319,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Rooms",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,6 +340,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Rooms",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
